@@ -3,13 +3,13 @@ import { useMemo } from 'react'
 import { Container } from 'react-bootstrap'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { v4 as uuidV4 } from 'uuid'
+import { useLocalStorage } from './customHook/useLocalStorage'
 import { EditNote } from './EditNote'
 import { NewNote } from './NewNote'
 import { Note } from './Note'
 import { NoteLayout } from './NoteLayout'
 import { NoteList } from './NoteList'
 import { NoteData, RawNote, Tag } from './types'
-import { useLocalStorage } from './useLocalStorage'
 
 function App() {
   const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', [])
