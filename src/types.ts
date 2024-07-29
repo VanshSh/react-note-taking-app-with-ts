@@ -1,3 +1,29 @@
+/**
+ * Typescript topics to use
+ *
+ * type
+ * interface
+ * number
+ * string
+ * boolean
+ * Object
+ * Array
+ * Void
+ * Never
+ * Union
+ * Function
+ * Optional parameters
+ * Default parameters
+ * Function overloading
+ * Extending interfaces
+ * Intersection types
+ * Type guards
+ * Type Assertions
+ * TS Generics
+ * Generic constraints
+ * Generic interfaces
+ */
+
 export type Note = {
   id: string
 } & NoteData
@@ -68,4 +94,19 @@ export type EditTagsModalProps = {
   handleClose: () => void
   onDeleteTag: (id: string) => void
   onUpdateTag: (id: string, label: string) => void
+}
+
+export interface IContextValue {
+  updateTag: (id: string, label: string) => void
+  addTag: (tag: Tag) => void
+  deleteTag: (id: string) => void
+  onDeleteNote: (id: string) => void
+  onUpdateNote: (id: string, data: NoteData) => void
+  onCreateNote: (data: NoteData) => void
+  notesWithTags: { id: string; title: string; markdown: string; tags: Tag[] }[]
+
+  setNotes: Function
+  setTags: Function
+  notes: RawNote[]
+  tags: Tag[]
 }

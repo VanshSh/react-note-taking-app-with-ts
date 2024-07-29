@@ -1,11 +1,24 @@
 - Github code: https://github.com/WebDevSimplified/react-note-taking-app
 
 
+- Functionality
+  - Debouncing in every input 
 
-- Dark / Light theme
-- Created on show
-- Status DONE/ PENDING on NoteCard
-- Delete button on landing page on Note card
+- NoteCard update
+  - Delete button on hover
+  - Emoji adding option like notion 
+  - Show title 
+  - Show description limited length
+  - date last update
+
+- Edit page
+  - Option to add emoji
+  - Option to add status
+    - Take inspiration from notion
+    - Later provide this feature on NoteCard
+
+- Landing page
+  - Search on Landing Page on the basis of Status Tag
+
 - All PR Feedbacks
-- Context API or other State managment zustand
-
+- Dark / Light theme
