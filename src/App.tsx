@@ -7,6 +7,7 @@ import { Note } from './Note'
 import { NoteLayout } from './NoteLayout'
 import { NoteList } from './NoteList'
 import { UseNoteContext } from './store'
+import { IContextValue } from './types'
 
 function App() {
   const {
@@ -21,7 +22,7 @@ function App() {
     tags,
     setTags,
     deleteTag,
-  } = UseNoteContext()
+  } = UseNoteContext() as IContextValue // Type Assertion
   return (
     <Container className='my-4'>
       <Routes>

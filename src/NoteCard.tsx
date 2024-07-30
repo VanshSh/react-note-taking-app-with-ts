@@ -1,21 +1,39 @@
 import { Badge, Card, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { CancelSvg } from './assets/icons.jsx'
 import styles from './NoteList.module.css'
-import { SimplifiedNote } from './types'
+import { UseNoteContext } from './store.js'
+import { IContextValue, SimplifiedNote } from './types'
 
-function NoteCard({ id, title, tags }: SimplifiedNote) {
+function NoteCard({ id, title, tags, markdown }: SimplifiedNote) {
+  const { onDeleteNote } = UseNoteContext() as IContextValue // Type Assertion
+
+  const truncatedDesc =
+    markdown?.length > 30 ? markdown.substring(0, 30) + '..' : markdown
+
   return (
     <Card
       as={Link}
       to={`/${id}`}
-      className={`h-100 text-reset text-decoration-none ${styles.card}`}
+      className={`h-100 p-3 text-reset text-decoration-none ${styles.card}`}
     >
-      <Card.Body>
+      <span
+        onClick={() => {
+          onDeleteNote(id)
+        }}
+        className={`position-absolute bg-light rounded-circle ${styles.card_cancel_button} `}
+      >
+        {CancelSvg}
+      </span>
+      <Card.Title>
+        <span className='fs-5'>{title}</span>
+      </Card.Title>
+      <Card.Body className='p-0 pb-2'>
+        <span className='fs-6'>{truncatedDesc}</span>
         <Stack
           gap={2}
           className='align-items-center justify-content-center h-100'
         >
-          <span className='fs-5'>{title}</span>
           {tags.length > 0 && (
             <Stack
               gap={1}

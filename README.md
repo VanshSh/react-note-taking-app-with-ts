@@ -19,6 +19,7 @@
 
 - Landing page
   - Search on Landing Page on the basis of Status Tag
+  - When there is no task then show the confettie
 
 - All PR Feedbacks
 - Dark / Light theme
