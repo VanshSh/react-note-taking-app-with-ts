@@ -27,7 +27,12 @@ export const NoteContextProvider = ({
     setNotes((prevNotes) => {
       return [
         ...prevNotes,
-        { ...data, id: uuidV4(), tagIds: tags.map((tag) => tag.id) },
+        {
+          ...data,
+          id: uuidV4(),
+          tagIds: tags.map((tag) => tag.id),
+          timeStamp: Date.now(),
+        },
       ]
     })
   }

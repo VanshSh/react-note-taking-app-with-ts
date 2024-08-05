@@ -1,13 +1,16 @@
 /**
  * Typescript topics to use
  *
- * type
- * interface
- * number
- * string
+ * type => DONE
+ * interface => DONE
+ * number => DONE
+ * string => DONE
  * boolean
- * Object
- * Array
+ * Object => DONE
+ * Array => DONE
+ * Tuple
+ * Enum
+ * Any
  * Void
  * Never
  * Union
@@ -24,6 +27,8 @@
  * Generic interfaces
  */
 
+export type TTimeStamp = number
+
 export type Note = {
   id: string
 } & NoteData
@@ -36,12 +41,14 @@ export type RawNoteData = {
   title: string
   markdown: string
   tagIds: string[]
+  timeStamp: TTimeStamp
 }
 
 export type NoteData = {
   title: string
   markdown: string
   tags: Tag[]
+  timeStamp: TTimeStamp
 }
 
 export type Tag = {
