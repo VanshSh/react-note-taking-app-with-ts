@@ -12,10 +12,10 @@
   - Emoji adding option like notion 
   [x] Show title 
   [x] Show description limited length
+  - Alignment of the tags
   - date last update => 02 Aug 24
  
 - Edit page
-
 
   - Option to add emoji
   - Option to add status

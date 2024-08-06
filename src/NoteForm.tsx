@@ -25,6 +25,7 @@ export function NoteForm({
       title: titleRef.current!.value,
       markdown: markdownRef.current!.value,
       tags: selectedTags,
+      timeStamp: Date.now(),
     })
 
     navigate('..')

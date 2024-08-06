@@ -16,10 +16,10 @@ function App() {
     onDeleteNote,
     onUpdateNote,
     onCreateNote,
+    tags,
     notesWithTags,
     notes,
     setNotes,
-    tags,
     setTags,
     deleteTag,
   } = UseNoteContext() as IContextValue // Type Assertion

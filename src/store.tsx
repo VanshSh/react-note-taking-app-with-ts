@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { createContext, useContext, useMemo } from 'react'
+import { createContext, useCallback, useContext, useMemo } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 import { useLocalStorage } from './customHook/useLocalStorage'
 import { IContextValue, NoteData, RawNote, Tag } from './types'
@@ -41,7 +41,12 @@ export const NoteContextProvider = ({
     setNotes((prevNotes) => {
       return prevNotes.map((note) => {
         if (note.id === id) {
-          return { ...note, ...data, tagIds: tags.map((tag) => tag.id) }
+          return {
+            ...note,
+            ...data,
+            tagIds: tags.map((tag) => tag.id),
+            timeStamp: Date.now(),
+          }
         } else {
           return note
         }
@@ -49,34 +54,45 @@ export const NoteContextProvider = ({
     })
   }
 
-  function onDeleteNote(id: string) {
-    setNotes((prevNotes) => {
-      return prevNotes.filter((note) => note.id !== id)
-    })
-  }
-
-  function addTag(tag: Tag) {
-    setTags((prev) => [...prev, tag])
-  }
-
-  function updateTag(id: string, label: string) {
-    setTags((prevTags) => {
-      return prevTags.map((tag) => {
-        if (tag.id === id) {
-          return { ...tag, label }
-        } else {
-          return tag
-        }
+  const onDeleteNote = useCallback(
+    (id: string) => {
+      setNotes((prevNotes) => {
+        return prevNotes.filter((note) => note.id !== id)
       })
-    })
-  }
+    },
+    [setNotes, notes]
+  )
 
-  function deleteTag(id: string) {
-    setTags((prevTags) => {
-      return prevTags.filter((tag) => tag.id !== id)
-    })
-  }
+  const addTag = useCallback(
+    (tag: Tag) => {
+      setTags((prev) => [...prev, tag])
+    },
+    [setTags, tags]
+  )
 
+  const updateTag = useCallback(
+    (id: string, label: string) => {
+      setTags((prevTags) => {
+        return prevTags.map((tag) => {
+          if (tag.id === id) {
+            return { ...tag, label }
+          } else {
+            return tag
+          }
+        })
+      })
+    },
+    [setTags, tags]
+  )
+
+  const deleteTag = useCallback(
+    (id: string) => {
+      setTags((prevTags) => {
+        return prevTags.filter((tag) => tag.id !== id)
+      })
+    },
+    [setTags, tags]
+  )
   const value: IContextValue = useMemo(() => {
     return {
       updateTag,

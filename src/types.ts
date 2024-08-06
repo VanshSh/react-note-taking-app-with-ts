@@ -111,8 +111,13 @@ export interface IContextValue {
   onDeleteNote: (id: string) => void
   onUpdateNote: (id: string, data: NoteData) => void
   onCreateNote: (data: NoteData) => void
-  notesWithTags: { id: string; title: string; markdown: string; tags: Tag[] }[]
-
+  notesWithTags: {
+    id: string
+    title: string
+    markdown: string
+    tags: Tag[]
+    timeStamp: TTimeStamp
+  }[]
   setNotes: Function
   setTags: Function
   notes: RawNote[]
