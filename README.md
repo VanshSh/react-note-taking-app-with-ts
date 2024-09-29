@@ -1,3 +1,5 @@
+## [LIVE APP](https://react-note-taking-app-with-ts.vercel.app/)
+
 ## Feature in coming iterations
   
 - NoteCard update
