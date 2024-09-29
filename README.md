@@ -22,7 +22,7 @@
 
 - Keep the code Optimised
 - Dark / Light theme
-
+---
 <details>
 <summary>Other Types to add</summary>
 
