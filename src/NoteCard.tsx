@@ -1,6 +1,6 @@
 import { Badge, Card, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { CancelSvg } from './assets/icons.jsx'
+import { CancelSvg } from './assets/icons.js'
 import styles from './NoteList.module.css'
 import { UseNoteContext } from './store.js'
 import { IContextValue, SimplifiedNote } from './types'

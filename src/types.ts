@@ -1,32 +1,3 @@
-/**
- * Typescript topics to use
- *
- * type => DONE
- * interface => DONE
- * number => DONE
- * string => DONE
- * boolean
- * Object => DONE
- * Array => DONE
- * Tuple
- * Enum
- * Any
- * Void
- * Never
- * Union
- * Function
- * Optional parameters
- * Default parameters
- * Function overloading
- * Extending interfaces
- * Intersection types
- * Type guards
- * Type Assertions
- * TS Generics
- * Generic constraints
- * Generic interfaces
- */
-
 export type TTimeStamp = number
 
 export type Note = {

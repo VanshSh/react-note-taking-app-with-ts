@@ -1,38 +1,51 @@
-- Github code: https://github.com/WebDevSimplified/react-note-taking-app
-
 ## Feature in coming iterations
-
-- Functionality => New / Optimization
   
-  [ ] Debouncing in every input 
-
 - NoteCard update
   
-  [x] Delete button on hover
   - Emoji adding option like notion 
-  [x] Show title 
-  [x] Show description limited length
+  - Limited title length
   - Alignment of the tags
-  - date last update => 02 Aug 24
- 
+  - Edit button on left side
+  - Last updated date show
+  - Add button on hover on the card 
+  - Option to change the status of the task
+  
 - Edit page
-
   - Option to add emoji
   - Option to add status
-    - Take inspiration from notion
-    - Later provide this feature on NoteCard
-    - - date last update => 02 Aug 24
 
 - Landing page
-
   - Search on Landing Page on the basis of Status Tag
   - When there is no task then show the confettie
 
-
-- Detail page
-
-    - date last update => 02 August 2024 02:25 PM 
-
-
-- All PR Feedbacks
+- Keep the code Optimised
 - Dark / Light theme
+
+<details>
+<summary>Other Types to add</summary>
+
+```
+ * type => DONE
+ * interface => DONE
+ * number => DONE
+ * string => DONE
+ * Object => DONE
+ * Array => DONE
+ * Tuple
+ * Enum
+ * Void
+ * Never
+ * Union
+ * Function
+ * Optional parameters
+ * Default parameters
+ * Function overloading
+ * Extending interfaces
+ * Intersection types
+ * Type guards
+ * Type Assertions
+ * TS Generics
+ * Generic constraints
+ * Generic interfaces
+```
+</details>
