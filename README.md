@@ -1,6 +1,6 @@
 ## [LIVE APP](https://react-note-taking-app-with-ts.vercel.app/)
 
-## Feature in coming iterations
+## Upcoming features:
   
 - NoteCard update
   
@@ -23,31 +23,5 @@
 - Keep the code Optimised
 - Dark / Light theme
 ---
-<details>
-<summary>Other Types to add</summary>
 
-```
- * type => DONE
- * interface => DONE
- * number => DONE
- * string => DONE
- * Object => DONE
- * Array => DONE
- * Tuple
- * Enum
- * Void
- * Never
- * Union
- * Function
- * Optional parameters
- * Default parameters
- * Function overloading
- * Extending interfaces
- * Intersection types
- * Type guards
- * Type Assertions
- * TS Generics
- * Generic constraints
- * Generic interfaces
-```
-</details>
+
