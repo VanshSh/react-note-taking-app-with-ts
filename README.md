@@ -1,7 +1,13 @@
 ## [LIVE APP](https://react-note-taking-app-with-ts.vercel.app/)
 
 ## Upcoming features:
-  
+
+
+- Header
+ 
+ - Add Github code link   
+
+
 - NoteCard update
   
   - Emoji adding option like notion 
